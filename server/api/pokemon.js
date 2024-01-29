@@ -15,6 +15,22 @@ const pokemonList = async (req, res) => {
   }
 };
 
+const pokemonDetail = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const response = await PokemonHelper.getPokemonDetail(id);
+
+    return res
+      .status(200)
+      .send({ message: "Successfully Get Pokemon Detail", data: response });
+  } catch (err) {
+    console.log(err.message, "<<< getPokemonDetail Error");
+    res.status(500).send({ message: err.message });
+  }
+};
+
 Router.get("/", pokemonList);
+Router.get("/:id", pokemonDetail);
 
 module.exports = Router;

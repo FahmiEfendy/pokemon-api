@@ -61,22 +61,43 @@ const postCatchPokemon = async (objectData) => {
         (data) => data.name.toLowerCase() === pokemonName.toLowerCase()
       );
 
-      if (groupedPokemonByName.length === 0) {
-        nickname = `${response.data.name}`;
-      } else if (groupedPokemonByName.length === 1) {
-        nickname = `${response.data.name}-0`;
-      } else if (
-        groupedPokemonByName.length == 2 ||
-        groupedPokemonByName.length === 3
-      ) {
-        nickname = `${response.data.name}-1`;
-      } else if (groupedPokemonByName.length > 2) {
-        lastFibonacci =
-          groupedPokemonByName[groupedPokemonByName.length - 1].nickname.split(
-            "-"
-          )[1];
+      let fibSequence = generateFibonacci(groupedPokemonByName.length);
+      let pokemonByNicknameFib = [];
+      groupedPokemonByName.map((data) => {
+        if (data.nickname.split("-")[1] !== undefined) {
+          pokemonByNicknameFib.push(Number(data.nickname.split("-")[1]));
+        }
+      });
 
-        nickname = `${response.data.name}-${nextFibonacci(lastFibonacci)}`;
+      const sortedPokemonByNicknameFib = _.sortBy(pokemonByNicknameFib);
+      const missingFib = () => {
+        for (let i = 0; i < sortedPokemonByNicknameFib.length + 1; i++) {
+          if (sortedPokemonByNicknameFib[i] !== fibSequence[i]) {
+            return fibSequence[i];
+          }
+        }
+      };
+
+      if (missingFib()) {
+        nickname = `${response.data.name}-${missingFib()}`;
+      } else {
+        if (groupedPokemonByName.length === 0) {
+          nickname = `${response.data.name}`;
+        } else if (groupedPokemonByName.length === 1) {
+          nickname = `${response.data.name}-0`;
+        } else if (
+          groupedPokemonByName.length == 2 ||
+          groupedPokemonByName.length === 3
+        ) {
+          nickname = `${response.data.name}-1`;
+        } else if (groupedPokemonByName.length > 2) {
+          lastFibonacci =
+            groupedPokemonByName[
+              groupedPokemonByName.length - 1
+            ].nickname.split("-")[1];
+
+          nickname = `${response.data.name}-${nextFibonacci(lastFibonacci)}`;
+        }
       }
 
       const formattedReponse = {

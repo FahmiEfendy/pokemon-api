@@ -1,6 +1,7 @@
 const Router = require("express").Router();
 
 const PokemonHelper = require("../helpers/pokemonHelper");
+const PokemonValidation = require("../helpers/validationHelper");
 
 const pokemonList = async (req, res) => {
   try {
@@ -86,6 +87,8 @@ const releaseCatchedPokemon = async (req, res) => {
 };
 
 const renameCatchedPokemon = async (req, res) => {
+  PokemonValidation.renameCatchedPokemonValidation(req.body);
+
   const { id } = req.params;
   const { nickname } = req.body;
 

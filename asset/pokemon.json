@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "insertedId": 0,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur"
+  },
+  {
+    "id": 1,
+    "insertedId": 1,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur-0"
+  },
+  {
+    "id": 1,
+    "insertedId": 2,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur-1"
+  },
+  {
+    "id": 1,
+    "insertedId": 3,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur-1"
+  },
+  {
+    "id": 1,
+    "insertedId": 4,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur-2"
+  },
+  {
+    "id": 1,
+    "insertedId": 5,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur-3"
+  },
+  {
+    "id": 1,
+    "insertedId": 6,
+    "name": "bulbasaur",
+    "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    "nickname": "bulbasaur-5"
+  },
+  {
+    "id": 132,
+    "insertedId": 7,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto"
+  },
+  {
+    "id": 132,
+    "insertedId": 8,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-0"
+  },
+  {
+    "id": 132,
+    "insertedId": 9,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-1"
+  },
+  {
+    "id": 132,
+    "insertedId": 10,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-1"
+  },
+  {
+    "id": 132,
+    "insertedId": 11,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-2"
+  },
+  {
+    "id": 132,
+    "insertedId": 12,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-3"
+  },
+  {
+    "id": 132,
+    "insertedId": 13,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-5"
+  },
+  {
+    "id": 132,
+    "insertedId": 14,
+    "name": "ditto",
+    "url": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "nickname": "ditto-8"
+  }
+]
